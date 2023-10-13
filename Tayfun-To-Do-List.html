@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tayfun-To-Do.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="To-List">
+            <h1>Master plan of avoided Tasks of Adulting</h1>
+            <h2>TO DO LIST <img src="./images/icon.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task">
+                <button onclick="showCalendar()">
+                  <label for="start"></label>
+                  <input type="date" id="start" name="trip-start" value="2023-12-10" min="2023-12-10" max="2030-12-31" />
+                  <button onclick="toggleDropdown()" class="dropbtn">Priority
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Today</a>
+                    <a href="#">Tomorrow</a>
+                    <a href="#">You Have Time</a>
+                  </div></button>
+                <button onclick="addTask()">Add</button>
+              </div></button>
+            </div>
+         
+        </div>
+    </div>
+    <section class="container1">
+        <div class="task-place">
+          <h2>Today</h2>
+          <div class="Today-list">
+            <ul id="list-container">
+              <!--
+              <li class="checked">Task-1</li>
+              <li>Task-2</li>
+              <li>Task-3</li>
+              -->
+          </ul>
+          </div>
+            
+        </div>
+        <div class="task-place">
+          <h2>Tomorrow</h2>
+          <div class="Tomorrow-List">
+          </div>
+        </div>
+        <div class="task-place">
+          <h2>You have time</h2>
+          <div class="You-have-time-list">
+          </div>
+        </div>
+    </section>
+    <section class="container2">
+       
+          <div class="Completed-Task">
+            <h2>Completed-Task</h2>
+            <div class="Completed-Task1">
+            </div>
+          </div>
+          
+    </section>
+   
+    <script src="Tayfun-srtipt.js"></script>
+</body>
+</html>
