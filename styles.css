@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   
+}
+body{
+    background-color: rgba(255, 249, 213, 0.349);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25dvh;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.input-bar{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 100dvw;
+    gap: 15px;
+    line-height: 30px;
+
+}
+.input-bar input{
+    width: 400px;
+    border: 1px solid rgba(0, 183, 255, 0.911);
+}
+button{
+    height: 30px;
+    min-width: 70px;
+    border-radius: 9999px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 183, 255, 0.911);
+    background-color: rgba(0, 183, 255, 0.911);
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding-top: 100px;
+    justify-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+.table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    gap: 25px;
+}
+.tittle{
+    background-color: red;
+    width: 300px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    border: solid 1px inherit;
+    border-radius: 9999px;
+    
+}
+.task-list{
+    width: 300px;
+    text-decoration: none;
+    border-radius: 15px;
+    min-height: 40dvh;
+}
+ul{
+   list-style: none;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   line-height: 25px;
+}
+
+#today{
+    background-color: rgba(255, 88, 88, 0.788);
+}
+#tomorrow{
+    background-color:  rgba(255, 255, 103, 0.568);
+}
+#time{
+    background-color: rgba(182, 255, 87, 0.623);
+}
+#finished{
+    background-color: rgba(79, 204, 253, 0.61);
+}
