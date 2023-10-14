@@ -7,6 +7,14 @@
     <title>To Do List</title>
 </head>
 <body>
+ <!--Loading screen-->
+<div id="welcome-content">
+    <h1>Welcome Our To Do List!</h1>
+    <p>Before you start making a list for yourself, do you swear that you will comply with every task on your list? If you don't, you should leave the site!</p>
+    <button id="continue-button">Yes,i swear i will comply with the list</button>
+</div>
+<div id="site-content" style="display: none;">
+    <!-- Inside of web site -->
     <div class="container">
         <div class="To-List">
             <h1>Master plan of avoided Tasks of Adulting</h1>
@@ -15,19 +23,19 @@
                 <input type="text" id="input-box" placeholder="Add your task">
                 <button onclick="showCalendar()">
                   <label for="start"></label>
-                  <input type="date" id="start" name="trip-start" value="2023-12-10" min="2023-12-10" max="2030-12-31" />
+                  <input type="date" id="start" name="trip-start" value="2023-10-10" min="2023-10-10" max="2030-12-31" />
                   <button onclick="toggleDropdown()" class="dropbtn">Priority
                   <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Today</a>
-                    <a href="#">Tomorrow</a>
-                    <a href="#">You Have Time</a>
+                    <a href="#">Low</a>
+                    <a href="#">Medium</a>
+                    <a href="#">High</a>
                   </div></button>
                 <button onclick="addTask()">Add</button>
               </div></button>
             </div>
          
         </div>
-    </div>
+    
     <section class="container1">
         <div class="task-place">
           <h2>Today</h2>
@@ -40,29 +48,44 @@
               -->
           </ul>
           </div>
-            
+          
         </div>
         <div class="task-place">
           <h2>Tomorrow</h2>
           <div class="Tomorrow-List">
+            <ul id="list-container">
+              <!--
+              <li class="checked">Task-1</li>
+              <li>Task-2</li>
+              <li>Task-3</li>
+              -->
+          </ul>
           </div>
         </div>
         <div class="task-place">
           <h2>You have time</h2>
           <div class="You-have-time-list">
+            <ul id="list-container">
+              <!--
+              <li class="checked">Task-1</li>
+              <li>Task-2</li>
+              <li>Task-3</li>
+              -->
+          </ul>
           </div>
         </div>
+        <button id="moveCheckedToCompleted">Mission Completed</button>
     </section>
     <section class="container2">
        
           <div class="Completed-Task">
             <h2>Completed-Task</h2>
-            <div class="Completed-Task1">
-            </div>
+            <ul class="Completed-Task1">
+            </ul>
           </div>
           
     </section>
-   
+  </div>
     <script src="Tayfun-srtipt.js"></script>
 </body>
 </html>
