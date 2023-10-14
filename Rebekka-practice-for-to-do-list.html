@@ -8,22 +8,35 @@
   </head>
   <body>
     <h1>Master plan of avoided tasks of adulting</h1>
-    <div class="containerInput">
+    <div class="containerWhole">
       <input id="inputField" type="text" placeholder="Add a task here..." />
       <button id="priority">Priority</button>
       <button id="addToDo">Add</button>
-      <button id="deadline">Deadline</button>
+      <button id="deadline">
+        Deadline
+        <select id="listSelection">
+          <option value="today">Today</option>
+          <option value="tomorrow">Tomorrow</option>
+          <option value="later">You Still Have Time</option>
+        </select>
+      </button>
 
       <div class="grid-container-lists-and-headings">
         <div class="grid-item" id="red-heading"><h2>Today</h2></div>
         <div class="grid-item" id="yellow-heading"><h2>Tomorrow</h2></div>
         <div class="grid-item" id="green-heading"><h2>You have time</h2></div>
-        <div class="grid-item" id="red-section">List of today</div>
-        <div class="grid-item" id="yellow-section">List of Tomorrow</div>
-        <div class="grid-item" id="green-section">List of Later</div>
+        <div class="grid-item" id="red-section">
+          <ul id="todoListToday"></ul>
+        </div>
+        <div class="grid-item" id="yellow-section">
+          <ul id="todoListTomorrow"></ul>
+        </div>
+        <div class="grid-item" id="green-section">
+          <ul id="todoListLater"></ul>
+        </div>
       </div>
 
-      <div class="to-dos-red" id="toDoContainer"></div>
+      <div class="completedTasks" id="completedTasks"></div>
     </div>
 
     <script src="./Rebekka-practice-making-a-to-do-list.js"></script>
