@@ -1,37 +1,137 @@
 html,
 body {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  width: 360px;
+.containerInput {
+  width: 100%;
 }
 
 #inputField {
-  width: 300px;
+  width: 80%;
   height: 46px;
   border: 1px solid black;
   outline: none;
   font-size: 25px;
   vertical-align: middle;
+  background-color: #00b6b6a2;
+  color: #094949;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 #addToDo {
   height: 50px;
-  width: 50px;
-  border: 1px solid black;
+  width: 70px;
+  border: 2px solid rgb(35, 7, 160);
+  border-radius: 30px;
   outline: none;
-  font-size: 30px;
+  font-size: 15px;
+  background-color: #00b6b6a2;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: 700;
 }
 
-.to-dos {
+#priority {
+  height: 50px;
+  width: 75px;
+  border: 2px solid rgb(35, 7, 160);
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  background-color: #00b6b6a2;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+/* Styling for body of list */
+#red-section {
   margin-top: 25px;
+  height: 300px;
+  background-color: #ef41238c;
+  border-radius: 30px;
+}
+
+#yellow-section {
+  margin-top: 25px;
+  height: 300px;
+  background-color: #ffdd0091;
+  border-radius: 30px;
+}
+
+#green-section {
+  margin-top: 25px;
+  height: 300px;
+  background-color: #66d6109c;
+  border-radius: 30px;
+}
+
+/* styling for heading of lists */
+
+#red-heading {
+  background-color: #ef41238c;
+  border-radius: 30px;
+  margin-top: 25px;
+  height: 30px;
+}
+
+#yellow-heading {
+  background-color: #ffdd0091;
+  border-radius: 30px;
+  margin-top: 25px;
+  height: 30px;
+}
+
+#green-heading {
+  background-color: #66d6109c;
+  border-radius: 30px;
+  margin-top: 25px;
+  height: 30px;
 }
 
 .paragraph-styling {
   margin: 0;
   cursor: pointer;
   font-size: 20px;
+}
+
+/* Grid css: */
+
+.grid-container-lists-and-headings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* headings styling */
+h1 {
+  color: #094949;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+  color: #094949;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
 }
