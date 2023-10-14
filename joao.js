@@ -1,25 +1,25 @@
+const button = document.getElementById('button-add')
+const input = document.querySelector ('input')
+const ul = document.querySelector('ul')
 
-const taskInput = document.getElementById("taskInput"); 
-const addTaskButton = document.getElementById("addTask"); 
+button.addEventListener('click', handleClick)
 
+function handleClick(){
+    if(input.value === '') return
 
-function addTask() {
-    const taskText = taskInput.value.trim();
+    const li = document.createElement('li')
+    li.textContent = input.value
+    ul.appendChild(li)
 
-    if (taskText !== '') { 
-        const li = document.createElement("li");
-        li.textContent = taskText; 
+    //
+    const icon = document.createElement('i')
+    icon.textContent = ' '
+    icon.classList = 'fa-solid fa-trash'
 
-        taskList.appendChild(li); // 
-        taskInput.value = ""; // 
-    }
+    li.appendChild(icon)
+
+    icon.addEventListener('click', () =>{
+        ul.removeChild(li)
+    })
+    input.value = '';
 }
-
-addTaskButton.addEventListener("click", addTask);
-
-
-taskInput.addEventListener("keyup", (event) => {
-    if (event.key === "Enter") {
-        addTask();
-    }
-});

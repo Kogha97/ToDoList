@@ -32,7 +32,10 @@ h1{
 }
 .input-bar input{
     width: 400px;
-    border: 1px solid rgba(0, 183, 255, 0.911);
+    border: 2px solid rgba(0, 183, 255, 0.911);
+}
+button:hover{
+    border: 2px solid black;
 }
 button{
     height: 30px;
@@ -43,7 +46,20 @@ button{
     background-color: rgba(0, 183, 255, 0.911);
 
 }
-
+i{
+    opacity: 0;
+    padding-right: 10px;
+}
+i:hover{
+    opacity: 1;
+    cursor: pointer;
+    background: rgba(0, 183, 255, 0.911);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    transition: 0.1s ease;
+    padding-right: 10px;
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -89,6 +105,10 @@ ul{
    padding-top: 10px;
    padding-bottom: 10px;
    line-height: 25px;
+}
+li{
+    display: flex;
+    justify-content: space-between;
 }
 
 #today{
