@@ -10,38 +10,58 @@
 <body>
     <header><h1>Master Plan of Avoided Tasks of Adulting </h1></header>
     <div class="input-bar">
-        <input type="text" placeholder=" Your boring task">
-        <button id="button-prio">Priority</button>
-        <button id="button-deadline">Deadline</button>
-        <button id="button-add">Add</button>
+        <input type="text" placeholder=" Your boring task" >
+
+        <div class="dropdown-container">
+            <select id="prioritySelect" class="dropdown" placeholder = "Priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          
+          <div class="dropdown-container">
+            <select id="deadlineSelect" class="dropdown">
+              <option value="today">Today</option>
+              <option value="tomorrow">Tomorrow</option>
+              <option value="youHaveTime">You have time</option>
+            </select>
+          </div>
+          
+        <button id="addButton">Add</button>
     </div>
     <div class = "grid-container">
         <div class="table">
             <h3 class="tittle" id="today">Today</h3>
             <div class="task-list" id="today">
-                <ul>
+                <ul id="todayList">
+                    <li>
+                        <!-- <span>Your boring task</span> -->
+                        <!-- <i class="fa-solid fa-x"></i> -->
+                      </li>
+                      
                 </ul>
             </div>
         </div>
         <div class="table">
             <h3 class="tittle" id="tomorrow">Tomorrow</h3>
             <div class="task-list" id="tomorrow">
-                <ul>
+                <ul id="tomorrowList">
                 </ul>
             </div>
         </div>
         <div class="table">
             <h3 class="tittle" id="time">You got Time</h3>
             <div class="task-list" id="time">
-                <ul>
+                <ul id="timeList">
 
                 </ul>
             </div>
         </div>
         <div class="table">
             <h3 class="tittle" id="finished">Finished and Done</h3>
-            <div>
-                <ul class="task-list" id="finished">
+            <div class="task-list" id="finished">
+                <ul id="finishedList">
                 </ul>
             </div>
         </div>
