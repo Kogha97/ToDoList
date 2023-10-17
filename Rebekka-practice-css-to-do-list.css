@@ -5,14 +5,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.containerInput {
+.containerWhole {
   width: 100%;
 }
 
 #inputField {
-  width: 80%;
+  width: 70%;
   height: 46px;
-  border: 1px solid black;
+  border: 1px solid #094949;
+  margin-bottom: 1rem;
   outline: none;
   font-size: 25px;
   vertical-align: middle;
@@ -22,10 +23,12 @@ body {
   padding: 10px;
 }
 
-#addToDo {
+#addToDo,
+#deadline,
+#priority {
   height: 50px;
-  width: 70px;
-  border: 2px solid rgb(35, 7, 160);
+  width: fit-content;
+  border: 2px solid #094949;
   border-radius: 30px;
   outline: none;
   font-size: 15px;
@@ -35,17 +38,13 @@ body {
   font-weight: 700;
 }
 
-#priority {
-  height: 50px;
-  width: 75px;
-  border: 2px solid rgb(35, 7, 160);
+#listSelection {
+  width: fit-content;
+  border: 2px solid #094949;
   border-radius: 30px;
   outline: none;
   font-size: 15px;
   background-color: #00b6b6a2;
-  padding: 10px;
-  margin-left: 10px;
-  font-weight: 700;
 }
 
 /* Styling for body of list */
@@ -54,6 +53,9 @@ body {
   height: 300px;
   background-color: #ef41238c;
   border-radius: 30px;
+  border: 2px solid #721f10b7;
+  list-style-type: circle;
+  display: block;
 }
 
 #yellow-section {
@@ -61,6 +63,7 @@ body {
   height: 300px;
   background-color: #ffdd0091;
   border-radius: 30px;
+  display: block;
 }
 
 #green-section {
@@ -68,6 +71,7 @@ body {
   height: 300px;
   background-color: #66d6109c;
   border-radius: 30px;
+  display: block;
 }
 
 /* styling for heading of lists */
@@ -113,7 +117,7 @@ body {
 .grid-item {
   border: 1px solid black;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,5 +137,5 @@ h2 {
   margin-bottom: 0px;
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
