@@ -16,15 +16,28 @@ h1{
     text-align: center;
     font-size: 40px;
 }
+i.fa-solid.fa-pen{
+    opacity: 1;
+    cursor: pointer;
+    background: rgba(0, 43, 59, 0.911);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    right: px;
+}
 i{
     opacity: 0;
     padding-right: 10px;
     text-decoration: none !important;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
 }
 i:hover{
     opacity: 1;
     cursor: pointer;
-    background: rgba(0, 183, 255, 0.911);
+    background: rgba(0, 43, 59, 0.911);
     -webkit-background-clip: text;
     background-clip: none;
     -webkit-text-fill-color: transparent;
@@ -68,6 +81,8 @@ h3{
     text-decoration: none;
     border-radius: 15px;
     min-height: 40dvh;
+    max-height: 40dvh;
+    overflow: auto;
 }
 ul{
    list-style: none;
@@ -153,7 +168,11 @@ li i {
     width: 400px;
     border: 2px solid rgba(0, 183, 255, 0.911);
 }
-button:hover{
+input{
+    height: 35px;
+    position: relative
+}
+button:hover, select:hover{
     border: 2px solid black;
     cursor: pointer;
 }
