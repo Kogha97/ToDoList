@@ -16,7 +16,7 @@ h1{
     text-align: center;
     font-size: 40px;
 }
-i.fa-solid.fa-pen{
+i.fa-solid.fa-pen, i.fa-solid.fa-check{
     opacity: 1;
     cursor: pointer;
     background: rgba(0, 43, 59, 0.911);
@@ -24,7 +24,9 @@ i.fa-solid.fa-pen{
     background-clip: none;
     -webkit-text-fill-color: transparent;
     position: relative;
-    right: px;
+}
+i.fa-solid.fa-check{
+    left: 5px;
 }
 i{
     opacity: 0;

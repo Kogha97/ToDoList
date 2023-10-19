@@ -39,37 +39,6 @@ function handleClick() {
   li.appendChild(icon)
 
 // edit button 
-/*
- let isEditing = false;
-  iconEdit.addEventListener('click', () =>{
-    if(isEditing){
-      return;
-    }
-  span.contentEditable = true;
-  span.focus()
-  isEditing = true;
-
-  });
-  span.addEventListener('keydown', (event)=>{
-    if(event.key ==='Enter'){
-      span.contentEditable = false;
-      isEditing = false;
-    }
-  })
-
-  span.addEventListener('blur', () =>{
-    span.contentEditable = false;
-    isEditing = false;
-  })
-
-  li.addEventListener('click', () =>{
-    if(!isEditing){
-      li.classList.toggle('checked');
-    }
-    });
-  */
- // ...
-
 let isEditing = false;
 
 iconEdit.addEventListener('click', () => {
@@ -102,8 +71,6 @@ span.addEventListener('blur', () => {
   input.classList.remove('editing');
 });
 
-
-
 //condition to insert the deadline input into the right table
   if (selectedDeadline === 'today') {
     todayList.appendChild(li);
@@ -117,17 +84,30 @@ span.addEventListener('blur', () => {
     li.parentElement.removeChild(li);
   });
 //dashed text on click
+
+iconDone = document.createElement('i')
+iconDone.classList = ('fa-solid fa-check')
+
   li.addEventListener('click', () => {
     span.classList.toggle('checked');
+
+    if(!iconDone.parentElement){
+      iconSpanDiv.appendChild(iconDone)
+    }
+    else{
+      iconDone.remove()
+    }
+
   });
 
-
+  iconDone.addEventListener('click', () =>{
+    finishedList.appendChild(li)
+  })
+  
 
   input.value = '';
 
-
 }
-
 
 /* W Functionality to add
 
@@ -138,13 +118,13 @@ add edit button  next to do delete -> on click allows to edit the list item.
 
 1) create an edit icon when list is created (DONE)
 
-2) create a function to click the edit button => on that function make it edit the text
+2) create a function to click the edit button => on that function make it edit the text (DONE)
 
       when click the button, we get a new input window where the text was, with the current text
       so the user can change it
 
 
-FINISHED TASK
+FINISHED TASK (DONE)
 
 when checked -> add button -> button moves to finished list
 
