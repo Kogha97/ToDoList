@@ -279,7 +279,6 @@ button{
     cursor: pointer;
     border-radius: 10px;
 }
-
 .run-buttonn{
     position: absolute;
     background-color: #0078e7;
@@ -316,3 +315,26 @@ button{
         opacity: 1;
     }
 }
+
+li[data-priority="low"]::before {
+    content: "🤏";
+    margin-right: 10px; /* Spacing between the emoji and the list text */
+    display: inline-block;
+  }
+  
+  li[data-priority="medium"]::before {
+    content: "🖖";
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  li[data-priority="high"]::before {
+    content: "👏";
+    margin-right: 10px;
+    display: inline-block;
+  }
+  /* Hide the default bullet point */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
