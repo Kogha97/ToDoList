@@ -1,4 +1,3 @@
-
 // all variables needed
 const button = document.getElementById('addButton');
 const input = document.querySelector ('input');
@@ -8,6 +7,7 @@ const tomorrowList = document.getElementById('tomorrowList');
 const timeList = document.getElementById('timeList');
 const finishedList = document.getElementById('finishedList')
 
+input.focus();
 //High order variable for add button
 button.addEventListener('click', handleClick);
 
@@ -35,7 +35,7 @@ function handleClick() {
   li.appendChild(iconSpanDiv);
   iconSpanDiv.appendChild(iconEdit);
   iconSpanDiv.appendChild(span);
- //apopend delete button
+ //append delete button
   li.appendChild(icon)
 
 // edit button 
@@ -51,11 +51,14 @@ iconEdit.addEventListener('click', () => {
   isEditing = true;
 });
 
-span.addEventListener('click', () => {
-  if (!isEditing) {
-    li.classList.toggle('checked');
-  }
-});
+ span.addEventListener('click', () => {
+   if (!isEditing) {
+     li.classList.toggle('checked');
+   }
+   else{
+    li.classList.toggle('unchecked')
+   }
+ });
 
 span.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
@@ -88,7 +91,7 @@ span.addEventListener('blur', () => {
 iconDone = document.createElement('i')
 iconDone.classList = ('fa-solid fa-check')
 
-  li.addEventListener('click', () => {
+  span.addEventListener('click', () => {
     span.classList.toggle('checked');
 
     if(!iconDone.parentElement){
@@ -97,47 +100,25 @@ iconDone.classList = ('fa-solid fa-check')
     else{
       iconDone.remove()
     }
-
   });
 
   iconDone.addEventListener('click', () =>{
     finishedList.appendChild(li)
   })
-  
 
   input.value = '';
 
 }
 
-/* W Functionality to add
-
-EDIT BUTTON
-
-add edit button  next to do delete -> on click allows to edit the list item.
+//save local storage function
 
 
-1) create an edit icon when list is created (DONE)
+/*  what needs to be stored?
 
-2) create a function to click the edit button => on that function make it edit the text (DONE)
-
-      when click the button, we get a new input window where the text was, with the current text
-      so the user can change it
+- text -> into the right list
+- all the icons (edit icon - done button - delete button)
 
 
-FINISHED TASK (DONE)
-
-when checked -> add button -> button moves to finished list
-
-1) create icon when checked is clicked
-
-2) create function for when icon is clicked the item is moved to finished list
-
-possible idea for finished task
-
-  if( 'checked' === true){
-    moveButton();
-  }
-
-Possible work on buttons, to make the priority / deadline appear has priority / deadline
 
 */
+
