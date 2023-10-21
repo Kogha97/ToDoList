@@ -11,6 +11,8 @@ header {
     align-items: center;
     justify-content: center;
     height: 25dvh;
+    background: lightblue;
+    width: 100%;
 }
 h1{
     text-align: center;
@@ -63,10 +65,36 @@ i:hover{
     width: 300px;
     gap: 25px;
 }
+
 .tittle{
     background-color: red;
     width: 300px;
 }
+/*finished*/
+.table1{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    gap: 25px;
+    grid-column: 2 / span 1;
+    padding-bottom: 50px;
+}
+
+.tittle1{
+    background-color: red;
+    width: 300px;
+}
+.task-list1{
+    width: 300px;
+    text-decoration: none;
+    border-radius: 15px;
+    min-height: 40dvh;
+    max-height: 40dvh;
+    overflow: auto;
+}
+/*finished end */
 h3{
     display: flex;
     justify-content: center;
@@ -156,13 +184,16 @@ li i {
 }
 
 .input-bar{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    width: 100dvw;
+    height: 50px;
     gap: 15px;
     line-height: 30px;
+    background-color: lightblue;
 }
 .input-bar input{
     width: 400px;
@@ -177,10 +208,9 @@ button:hover, select:hover{
     cursor: pointer;
 }
 button{
-    position: relative;
     height: 30px;
     min-width: 100px;
-    border-radius: 9999px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     border: 1px solid rgba(0, 183, 255, 0.911);
@@ -197,3 +227,87 @@ button{
     font-size: 16px;
     cursor: pointer;
   }
+
+
+  /* Welcome */
+.welcome-contentt {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-gap: 20px; 
+    color: black;
+    z-index: 1;
+    background-color: #ffec99;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom:20%;
+}
+.welcome-contentt h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+.welcome-contentt p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: red;
+}
+.continue-buttonn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    align-items: center;
+    transition: background-color 0.3s;
+    animation: slide-in  2s linear forwards;
+    opacity: 0;
+    background-color: #0078e7;
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.run-buttonn{
+    position: absolute;
+    background-color: #0078e7;
+    color: #fff;
+    width: 220px;
+    height: 40px;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+    animation: slide-in  2s linear forwards;
+    opacity: 0;
+    top: 350px;
+}
+#continue-button:hover {
+    background-color: #0054a5;
+}
+#site-content {
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+#welcome-content h1, #welcome-content p {
+    display: inline-block;
+    opacity: 0;
+    animation: slide-in  2s linear forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

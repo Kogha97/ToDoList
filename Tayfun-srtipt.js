@@ -1,6 +1,5 @@
 const inputBox=document.getElementById ("input-box");
 const listContainer = document.getElementById("list-container");
-
 function addTask(){
     if (inputBox.value ===  ``){
         alert("You must write something");
@@ -27,7 +26,6 @@ listContainer.addEventListener("click", function (e)
         saveData();
     }
 },false );
-
 /*Movemant*/ 
 document.getElementById("moveCheckedToCompleted").addEventListener("click", function () {
     const checkedTasks = document.querySelectorAll(".checked");
@@ -35,24 +33,10 @@ document.getElementById("moveCheckedToCompleted").addEventListener("click", func
     checkedTasks.forEach(function (task) {
       completedContainer.appendChild(task);
       task.classList.add(Today-list);
-      
     });
-    
   });
   function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
-  }
-  
-  // Sürüklenen öğeyi bıraktığınızda
-  function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-  }
-  
-  // Sürükleme işlemine izin vermek için
-  function allowDrop(event) {
-    event.preventDefault();
   }
   /*save data*/
 function saveData(){
@@ -62,7 +46,6 @@ function showTask(){
     listContainer.innerHTML= localStorage.getItem("data");
 }
 showTask();
-
 // calendar
  const calendar = document.getElementById("calendar");
 function showCalendar() {
@@ -77,7 +60,7 @@ function toggleDropdown() {
     var dropdown = document.getElementById("myDropdown");
     dropdown.classList.toggle("show");
   }
-  
+
   // when you click another empty place drown down is hiding
  window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -90,9 +73,7 @@ function toggleDropdown() {
       }
     }
   }
-
   //Welcome
-
   document.addEventListener("DOMContentLoaded", function () {
     const welcomeContent = document.getElementById("welcome-content");
     const continueButton = document.getElementById("continue-button");

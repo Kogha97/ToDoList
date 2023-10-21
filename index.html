@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 </head>
 <body>
+    <!--Loading screen-->
+    <div id="welcome-content"class="welcome-contentt">
+      <h1>Welcome Our To Do List!</h1>
+      <p>Before you start making our own to do list, we have a little question.Guess who made this web site?</p>
+      <button id="continue-button" class="continue-buttonn">ChatGpt & Google made it</button>
+      <button id="run-button"class="run-buttonn">You Guys Did It</button>
+     </div>
+    <div id="site-content" style="display: none;" class="site-save">
+    <!-- Inside of web site -->
     <header><h1>Master Plan of Avoided Tasks of Adulting </h1></header>
     <div class="input-bar">
         <input type="text" placeholder=" Your boring task" >
@@ -31,12 +40,10 @@
         <button id="addButton">Add</button>
     </div>
     <div class = "grid-container">
-        <div class="table">
+        <div class="table" >
             <h3 class="tittle" id="today">Today</h3>
             <div class="task-list" id="today">
                 <ul id="todayList">
-
-                      
                 </ul>
             </div>
         </div>
@@ -55,14 +62,16 @@
                 </ul>
             </div>
         </div>
-        <div class="table">
-            <h3 class="tittle" id="finished">Finished and Done</h3>
-            <div class="task-list" id="finished">
+        <div class="table1">
+            <h3 class="tittle1" id="finished">Finished and Done</h3>
+            <div class="task-list1" id="finished">
                 <ul id="finishedList">
                 </ul>
             </div>
         </div>
     </div>
+</div>
+</div>
     <script src="joao.js"></script>
 </body>
 </html>
