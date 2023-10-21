@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+input.focus();
 //High order variable for add button
 button.addEventListener('click', handleClick)
 
@@ -56,7 +57,7 @@ function handleClick() {
   li.appendChild(iconSpanDiv);
   iconSpanDiv.appendChild(iconEdit);
   iconSpanDiv.appendChild(span);
- //apopend delete button
+ //append delete button
   li.appendChild(icon)
   let isEditing = false;
   iconEdit.addEventListener('click', () => {
@@ -148,6 +149,65 @@ span.addEventListener('blur', () => {
   */
  // ...
 
+let isEditing = false;
+
+iconEdit.addEventListener('click', () => {
+  if (isEditing) {
+    return;
+  }
+  span.contentEditable = true;
+  span.focus();
+  input.classList.add('editing');
+  isEditing = true;
+});
+
+span.addEventListener('click', () => {
+  if (!isEditing) {
+    li.classList.toggle('checked');
+  }
+});
+
+span.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    span.contentEditable = false;
+    isEditing = false;
+    input.classList.remove('editing');
+  }
+  });
+
+span.addEventListener('blur', () => {
+  span.contentEditable = false;
+  isEditing = false;
+  input.classList.remove('editing');
+});
+
+
+
+//condition to insert the deadline input into the right table
+  if (selectedDeadline === 'today') {
+    todayList.appendChild(li);
+  } else if (selectedDeadline === 'tomorrow') {
+    tomorrowList.appendChild(li);
+  } else if (selectedDeadline === 'youHaveTime') {
+    timeList.appendChild(li);
+  }
+//remove button function
+  icon.addEventListener('click', () => {
+    li.parentElement.removeChild(li);
+  });
+//dashed text on click
+  li.addEventListener('click', () => {
+    span.classList.toggle('checked');
+  });
+
+
+
+  input.value = '';
+
+
+}
+
+
 /* W Functionality to add
 
 EDIT BUTTON
@@ -165,7 +225,7 @@ add edit button  next to do delete -> on click allows to edit the list item.
 
 FINISHED TASK
 
-when checked -> add button -> button moves to finished list // its finished
+when checked -> add button -> button moves to finished list
 
 1) create icon when checked is clicked
 

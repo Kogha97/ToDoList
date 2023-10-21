@@ -4,23 +4,29 @@ body {
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .containerWhole {
   width: 100%;
+  text-align: center; /* Center align the content */
 }
 
 #inputField {
-  width: 70%;
+  width: 90%;
   height: 46px;
   border: 1px solid #094949;
   margin-bottom: 1rem;
   outline: none;
   font-size: 25px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   background-color: #00b6b6a2;
   color: #094949;
   border-radius: 30px;
   padding: 10px;
+  display: block; /* Display input as a block element */
+  margin: 0 auto; /* Center the input horizontally */
+}
+
+#initial-buttons {
+  text-align: center; /* Center align the buttons container */
 }
 
 #addToDo,
@@ -34,17 +40,37 @@ body {
   font-size: 15px;
   background-color: #00b6b6a2;
   padding: 10px;
-  margin-left: 10px;
+  margin: 10px; /* Add margin around the buttons */
   font-weight: 700;
+}
+
+#priority {
+  width: 230px;
+}
+
+#addToDo {
+  background-color: #800f97;
+  color: #fff;
 }
 
 #listSelection {
   width: fit-content;
-  border: 2px solid #094949;
+  border: 2px solid #800f97;
   border-radius: 30px;
   outline: none;
   font-size: 15px;
-  background-color: #00b6b6a2;
+  background-color: #800f97;
+  color: #fff;
+}
+
+#prioritySelection {
+  width: fit-content;
+  border: 2px solid #800f97;
+  border-radius: 30px;
+  outline: none;
+  font-size: 15px;
+  background-color: #800f97;
+  color: #fff;
 }
 
 /* Styling for body of list */
@@ -74,6 +100,14 @@ body {
   display: block;
 }
 
+#grey-section {
+  margin-top: 25px;
+  height: 300px;
+  background-color: #8f8c8c;
+  border-radius: 30px;
+  display: block;
+}
+
 /* styling for heading of lists */
 
 #red-heading {
@@ -97,6 +131,13 @@ body {
   height: 30px;
 }
 
+#grey-heading {
+  background-color: #8f8c8c;
+  border-radius: 30px;
+  margin-top: 25px;
+  height: 30px;
+}
+
 .paragraph-styling {
   margin: 0;
   cursor: pointer;
@@ -112,15 +153,35 @@ body {
   gap: 30px;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .grid-item {
   border: 1px solid black;
   padding: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* grid CSS forcompletedtasks: */
+
+.container-completedTasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+
+.completed-grid-item {
+  background-color: #8f8c8c;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 30px;
+  min-width: 300px;
+  max-width: 40%;
 }
 
 /* headings styling */
@@ -138,4 +199,73 @@ h2 {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+/* Input and editing aesthetics: */
+
+li {
+  transition: all 0.3s ease; /* Smooth transitions for all properties */
+}
+
+li > input {
+  background-color: #f7f7f700; /* completely transparant to match list background background */
+  border: 2px solid #434749; /* Blue border */
+  padding: 5px;
+  border-radius: 4px; /* Rounded corners */
+  width: 80%; /* To make sure the input fills the space in the li */
+  box-sizing: border-box;
+  font-size: 16px; /* Match with other task font sizes */
+  vertical-align: middle;
+}
+
+li > input:focus {
+  outline: none; /* Removing the default browser outline */
+  border-color: #414d53; /* A lighter shade of blue for focus state */
+  box-shadow: 0 0 5px rgba(102, 204, 255, 0.377); /* Subtle glow around the input */
+}
+
+/* ChatGPT (still need to go over, tweak and adjust, understand) for delete button */
+li {
+  position: relative; /* Set position to relative so the absolute-positioned button is relative to this li */
+  padding-right: 25px; /* Space for the delete button */
+}
+
+li .delete-btn {
+  position: absolute; /* Absolute positioning */
+  right: 0; /* Position it at the right of the li */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Fine-tune the vertical centering */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition for appearance */
+  cursor: pointer; /* Hand cursor for button interaction */
+}
+
+li:hover .delete-btn {
+  opacity: 1; /* Show on hover */
+}
+
+/* Chat-GPT priority to bulletpoints | to be revised, adjusted, understood */
+
+li[data-priority="low"]::before {
+  content: "🤏";
+  margin-right: 10px; /* Spacing between the emoji and the list text */
+  display: inline-block;
+}
+
+li[data-priority="medium"]::before {
+  content: "🤌";
+  margin-right: 10px;
+  display: inline-block;
+}
+
+li[data-priority="high"]::before {
+  content: "👏";
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* Hide the default bullet point */
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }

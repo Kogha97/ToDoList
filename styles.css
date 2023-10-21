@@ -18,7 +18,7 @@ h1{
     text-align: center;
     font-size: 40px;
 }
-i.fa-solid.fa-pen{
+i.fa-solid.fa-pen, i.fa-solid.fa-check{
     opacity: 1;
     cursor: pointer;
     background: rgba(0, 43, 59, 0.911);
@@ -26,7 +26,9 @@ i.fa-solid.fa-pen{
     background-clip: none;
     -webkit-text-fill-color: transparent;
     position: relative;
-    right: px;
+}
+i.fa-solid.fa-check{
+    left: 5px;
 }
 i{
     opacity: 0;
@@ -145,6 +147,9 @@ li i {
 #finished{
     background-color: rgba(79, 204, 253, 0.61);
 }
+.dropdown{
+    border: 2px solid rgba(0, 183, 255, 0.911);
+}
 .dropdown-container {
     position: relative;
     display: inline-block;
@@ -213,7 +218,7 @@ button{
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    border: 1px solid rgba(0, 183, 255, 0.911);
+    border: 2px solid rgba(0, 183, 255, 0.911);
     background-color: rgba(0, 183, 255, 0.911);
 }
 #listSelectionDeadline #listSelectionPrior {
