@@ -113,42 +113,6 @@ span.addEventListener('blur', () => {
   });
   input.value = '';
 }
-
-
-
-
-// edit button 
-/*
- let isEditing = false;
-  iconEdit.addEventListener('click', () =>{
-    if(isEditing){
-      return;
-    }
-  span.contentEditable = true;
-  span.focus()
-  isEditing = true;
-
-  });
-  span.addEventListener('keydown', (event)=>{
-    if(event.key ==='Enter'){
-      span.contentEditable = false;
-      isEditing = false;
-    }
-  })
-
-  span.addEventListener('blur', () =>{
-    span.contentEditable = false;
-    isEditing = false;
-  })
-
-  li.addEventListener('click', () =>{
-    if(!isEditing){
-      li.classList.toggle('checked');
-    }
-    });
-  */
- // ...
-
 let isEditing = false;
 
 iconEdit.addEventListener('click', () => {
@@ -199,13 +163,8 @@ span.addEventListener('blur', () => {
   li.addEventListener('click', () => {
     span.classList.toggle('checked');
   });
-
-
-
   input.value = '';
 
-
-}
 
 
 /* W Functionality to add
