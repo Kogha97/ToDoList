@@ -14,9 +14,9 @@ function handleClick() {
   //general input treatment, makes user have to type something and clears whitespace
   const inputValue = input.value.trim();
   if (inputValue === '') return;
-//deadline input to asign right table
-  const deadlineSelect = document.getElementById('deadlineSelect');
-  const selectedDeadline = deadlineSelect.options[deadlineSelect.selectedIndex].value;
+// //deadline and priority input to asign right table
+const deadlineSelect = document.getElementById('deadlineSelect');
+const selectedDeadline = deadlineSelect.options[deadlineSelect.selectedIndex].value;
 //li variables
   const li = document.createElement('li');
   const span = document.createElement('span');
@@ -39,6 +39,24 @@ function handleClick() {
 
 // edit button 
 let isEditing = false;
+
+const prioritySelect = document.getElementById('prioritySelect');
+const selectedPriority = prioritySelect.options[prioritySelect.selectedIndex].value;
+
+const emojiSpan = document.createElement('span');
+emojiSpan.textContent = selectedPriority;
+iconSpanDiv.appendChild(emojiSpan);
+
+iconSpanDiv.appendChild(span)
+
+//condition to insert the deadline input into the right table
+   if (selectedDeadline === 'today') {
+     todayList.appendChild(li);
+   } else if (selectedDeadline === 'tomorrow') {
+     tomorrowList.appendChild(li);
+   } else if (selectedDeadline === 'youHaveTime') {
+     timeList.appendChild(li);
+   }
 
 
 iconEdit.addEventListener('click', () => {
@@ -74,14 +92,7 @@ span.addEventListener('blur', () => {
   input.classList.remove('editing');
 });
 
-//condition to insert the deadline input into the right table
-  if (selectedDeadline === 'today') {
-    todayList.appendChild(li);
-  } else if (selectedDeadline === 'tomorrow') {
-    tomorrowList.appendChild(li);
-  } else if (selectedDeadline === 'youHaveTime') {
-    timeList.appendChild(li);
-  }
+
 //remove button function
   icon.addEventListener('click', () => {
     li.parentElement.removeChild(li);
@@ -106,8 +117,7 @@ iconDone.classList = ('fa-solid fa-check')
     finishedList.appendChild(li)
   })
   // icons
-const prioritySelect = document.getElementById("prioritySelect").value;
-listItem.setAttribute("data-priority", prioritySelect);
+
   input.value = '';
 }
 //welcome loading screen
@@ -129,4 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
     runButton.style.top = newY + "px";
   });
 });
+
+
+
+
+
 

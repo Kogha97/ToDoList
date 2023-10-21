@@ -4,6 +4,8 @@
   ],
   "hints": {
     "axe/forms": "off",
-    "compat-api/css": "off"
+    "compat-api/css": "off",
+    "axe/keyboard": "off",
+    "no-inline-styles": "off"
   }
 }

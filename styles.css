@@ -126,6 +126,7 @@ li{
     justify-content: space-between;
     cursor: pointer;
     text-decoration: none;
+    padding-left: 10px;
 }
 li.checked span {
     text-decoration: line-through;
@@ -278,6 +279,7 @@ button{
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    min-width: 300px;
 }
 .run-buttonn{
     position: absolute;
@@ -289,10 +291,11 @@ button{
     transition: background-color 0.3s;
     animation: slide-in  2s linear forwards;
     opacity: 0;
-    top: 350px;
+    top: 450px;
 }
 #continue-button:hover {
     background-color: #0054a5;
+ 
 }
 #site-content {
     display: none;
